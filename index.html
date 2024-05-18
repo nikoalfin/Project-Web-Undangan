@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Document</title>
+   
+</head>
+<body>
+    <div id="navbar-invitation" class="container flex justify-center items-center  mx-auto relative opacity-0  " style="transition: transform 0.5s ease-in-out;
+ 
+    animation-duration: .2ms;
+    ">
+        <nav class="flex flex-row w-max rounded-lg fixed z-50 mx-auto bottom-6 px-1 h-auto  bg-stone-50 bg-opacity-80 justify-center items-center shadow-lg">
+            <a href="#1" class="w-10 h-10 lg:w-12 lg:h-12 flex justify-center items-center m-2 bg-[#CB9D7E] rounded-lg">
+                <img src="./assets/image/icon-menu/ic-1.svg" width="50%" alt="">
+            </a>
+            <a href="#2" class="w-10 h-10 lg:w-12 lg:h-12 flex justify-center items-center m-2 bg-[#CB9D7E] rounded-lg">
+                <img src="./assets/image/icon-menu/ic-2.svg" width="50%" alt="">
+            </a>
+            <a href="#3" class="w-10 h-10 lg:w-12 lg:h-12 flex justify-center items-center m-2 bg-[#CB9D7E] rounded-lg">
+                <img src="./assets/image/icon-menu/ic-3.svg" width="50%" alt="">
+            </a>
+            <a href="#4" class="w-10 h-10 lg:w-12 lg:h-12 flex justify-center items-center m-2 bg-[#CB9D7E] rounded-lg">
+                <img src="./assets/image/icon-menu/ic-4.svg" width="50%" alt="">
+            </a>
+            <a href="#5" class="w-10 h-10 lg:w-12 lg:h-12 flex justify-center items-center m-2 bg-[#CB9D7E] rounded-lg">
+                <img src="./assets/image/icon-menu/ic-5.svg" width="50%" alt="">
+            </a>
+            <a href="#6" class="w-10 h-10 lg:w-12 lg:h-12 flex justify-center items-center m-2 bg-[#CB9D7E] rounded-lg">
+                <img src="./assets/image/icon-menu/ic-6.svg" width="50%" alt="">
+            </a>
+        </nav>
+        
+
+        <button class="bottom-20 right-5 lg:right-[33%] lg:bottom-24 z-50 fixed w-8 h-8 rounded-full bg-color-base text-white font-bold flex justify-center items-center" onclick="playPause()">O</button>    
+    </div>
+    
+    
+        <button class="bottom-32 left-10 z-50 fixed w-9 h-9 rounded-full bg-color-base text-white font-bold" id="" onclick="toggleFullScreen()">&#x26F6; </button>
+   
+    <audio id="myAudio" src="./assets/music/Yovie-Nuno-Janji-Suci-Video-Clip.mp3"></audio>
+
+    <section id="1" class="relative overflow-hidden lg:bg-[url('/assets/image/BG-desktop.png')] bg-[url('/assets/image/BG-01.jpg')]  w-full h-screen bg-no-repeat bg-cover bg-center ">
+        <div class="container mx-auto flex flex-col justify-center items-center h-full">
+            <h1 class="lg:text-2xl text-xl font-base color-base">
+                The Wedding Of
+            </h1>
+            <div class="w-[250px] h-[250px] lg:w-[320px] lg:h-[320px] overflow-hidden flex justify-center items-center" >
+                <img src="./assets/image/foto-1.jpg" alt="" class="w-full object-cover style-img-cs" >
+            </div>
+            <h2 class="lg:text-4xl text-2xl font-bold font-base color-base">Fulan & Fulana</h2>
+            <div class="flex flex-col gap-1 items-center">
+                <span class="lg:text-xl text-base color-text ">Kepada Yth. Bapak/Ibu/Saudara/i</span>
+                <h3 class="lg:text-2xl text-xl font-bold  color-base">Nama Tamu</h3>
+                <span class="lg:text-xl text-base color-text">Di Tempat</span>
+            </div>
+            <button id="btn-open" onclick="openCard()">Buka Undangan</button>
+        </div>
+        <img src="./assets/image/bunga-1.png" class="flower-animate-cs absolute z-10 top-[-10px] lg:w-[200px] w-[130px]" alt="">
+         <img src="./assets/image/bunga-2.png" class="flower-animate-cs absolute z-10 bottom-[-10px] right-0 lg:w-[200px] w-[130px]" alt="">
+    </section>
+        <main id="card-invitation" class="hidden">
+        <!-- section hero 1 -->
+        <section id="1" class="relative overflow-hidden lg:bg-[url('/assets/image/BG-desktop.png')] bg-[url('/assets/image/BG-01.jpg')]  w-full h-screen bg-no-repeat bg-cover bg-center ">
+            <div class="container mx-auto flex flex-col justify-center items-center h-full">
+                <h1 class="lg:text-2xl text-xl font-base color-base">
+                    The Wedding Of
+                </h1>
+                <div class="w-[250px] h-[250px] lg:w-[320px] lg:h-[320px] overflow-hidden flex justify-center items-center" >
+                    <img src="./assets/image/foto-1.jpg" alt="" class="w-full object-cover style-img-cs" >
+                </div>
+                <h2 class="lg:text-4xl text-2xl font-bold font-base color-base">Fulan & Fulana</h2>
+                <div class="flex flex-col gap-1 items-center">
+                    <span class="lg:text-xl text-base color-text ">Kepada Yth. Bapak/Ibu/Saudara/i</span>
+                    <h3 class="lg:text-2xl text-xl font-bold  color-base">Nama Tamu</h3>
+                    <span class="lg:text-xl text-base color-text">Di Tempat</span>
+                </div>
+            </div>
+            <img src="./assets/image/bunga-1.png" class="flower-animate-cs absolute z-10 top-[-10px] lg:w-[200px] w-[130px]" alt="">
+             <img src="./assets/image/bunga-2.png" class="flower-animate-cs absolute z-10 bottom-[-10px] right-0 lg:w-[200px] w-[130px]" alt="">
+        </section>
+        <!-- / section hero 1 / -->
+
+        <!-- section 2 mempelai -->
+        <section  class="relative overflow-hidden lg:bg-[url('/assets/image/BG-desktop.png')]  bg-[url('/assets/image/BG-01.jpg')]  w-full h-auto bg-no-repeat bg-cover bg-center">
+            <div class="container lg:px-20 px-0 mx-auto flex flex-col justify-center items-center w-full h-full">
+                <div id="2" class=" px-10 flex flex-col justify-center items-center h-auto w-full bg-[#FCFBFB] bg-opacity-65 rounded-lg shadow-sm gap-7 py-7 my-40">
+                    <span class="lg:text-2xl text-xl font-base color-base   w-full text-center mt-8">
+                        Assalamu’alaikum Wr. Wb.
+                    </span>
+
+                    <span class="lg:text-xl text-sm mx-7 lg:mx-10 text-center  ">
+                        Dengan Memohon Rahmat Dan Ridho Allah SWT Yang Telah Menciptakan Makhluk-Nya Secara Berpasang-Pasangan, Kami Bermaksud Menyelenggarakan Pernikahan Kami.
+                    </span>
+
+                    <span class="lg:text-xl text-sm mx-7 lg:mx-10 text-center  ">
+                        Kami akan menikah, <br>
+                        dan kami ingin Anda menjadi bagian <br>
+                        dari hari istimewa kami!
+                    </span>
+
+                    <div class="flex flex-row w-full md:gap-8 gap-4 justify-center items-center">
+                        <div class="w-full flex items-center flex-col ">
+                            <div class="max-w-[180px] h-auto sm:h-[270px] lg:max-w-[320px] lg:h-[320px] overflow-hidden flex justify-center items-center" >
+                                <img src="./assets/image/mempelai/pria-1.png" alt="" class="h-auto sm:w-full object-cover style-img-cs" >
+                            </div> 
+                            <h2 class="lg:text-4xl text-2xl font-bold font-base color-base">Maulana</h2>
+                        </div>
+                        <div class="up-down-animation h-10 min-w-[30px] md:min-w-[45px] mb-2 text-center flex justify-center items-center relative" >
+                            <img class="w-full absolute" src="./assets/image/ic-cincin.svg" alt="">    
+                        </div>
+                        <div class="w-full flex items-center flex-col ">
+                            <div class="max-w-[180px] h-auto sm:h-[270px] lg:max-w-[320px] lg:h-[320px] overflow-hidden flex justify-center items-center" >
+                                <img src="./assets/image/mempelai/wanita-1.png" alt="" class="h-auto sm:w-full object-cover style-img-cs" >
+                            </div> 
+                            <h2 class="lg:text-4xl text-2xl font-bold font-base color-base">Fulana</h2>
+                        </div>
+                    </div>
+
+                    <div class="w-full justify-center items-center flex flex-col lg:flex-row gap-9">
+                        <div class="flex flex-col gap-3 w-full">
+                            <h2 class="lg:text-4xl text-2xl font-bold font-base color-base text-center">Falahudin Sahid</h2>
+                            <span class="lg:text-xl text-sm  text-center">Putri Keempat Dari Keluarga Bapak Lorem Dan Ibu Ipsum</span>
+
+                            <div class="lg:text-xl text-sm  text-center color-base ">
+                                <span>@instagram</span>
+                            </div>
+                        </div>
+
+                        <span class="text-style-cs-2 lg:text-5xl text-5xl font-base color-base  text-center ">
+                            &
+                        </span>
+
+                        <div class="flex flex-col gap-3 w-full">
+                            <h2 class="lg:text-4xl text-2xl font-bold font-base color-base text-center">Falahudin Sahid</h2>
+                            <span class="lg:text-xl text-sm  text-center">Putri Keempat Dari Keluarga Bapak Lorem Dan Ibu Ipsum</span>
+
+                            <div class="lg:text-xl text-sm mx-7 lg:mx-10 text-center color-base ">
+                                <span>@instagram</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <img src="./assets/image/bunga-1.png" class="flower-animate-cs absolute z-10 top-[-20px] lg:w-[200px] w-[130px]" alt="">
+            <img src="./assets/image/bunga-2.png" class="flower-animate-cs absolute z-10 bottom-[-10px] right-0 lg:w-[200px] w-[130px]" alt="">
+        </section>
+        <!-- / section 2 mempelai / -->
+
+        <!-- section 3 waktu -->
+        <section class="relative overflow-hidden lg:bg-[url('/assets/image/BG-desktop.png')]  bg-[url('/assets/image/BG-01.jpg')]  w-full h-auto bg-no-repeat bg-cover bg-center">
+            <div class="container lg:px-20 px-0 mx-auto flex flex-col justify-center items-center w-full h-full">
+                <div id="4" class=" px-10 flex flex-col justify-center items-center h-auto w-full bg-[#FCFBFB] bg-opacity-65 rounded-lg shadow-sm gap-9 py-7 my-40">
+
+                    <span class="text-style-cs lg:text-2xl text-xl font-base color-base font-black  w-full text-center mt-8">
+                        Save The Date
+                    </span>
+
+                    <span class="lg:text-xl text-sm mx-7 lg:mx-10 text-center  ">
+                        Selalu Ada Yang Spesial Dalam Cerita Kami. Dan Kami Pun Merasa Sangat Spesial Untuk Satu Sama Lain. Dan Kami Bersyukur, Dipertemukan Allah Diwaktu Terbaik, Kini Kami Menanti Hari Istimewa Kami.
+                    </span>
+
+                    <h2 class="lg:text-2xl text-xl  font-base color-base text-center">Rangkaian Acara Yang Akan Diselenggarakan</h2>
+
+                    <div class="w-full justify-center items-center flex flex-col lg:flex-row gap-9">
+                        <div class="flex  flex-col gap-0 max-w-[500px] w-full rounded-xl py-8 px-3 " style="box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.18);">
+                            <div class="up-down-animation h-10 w-full mb-2 text-center flex justify-start items-center" >
+                                <img class="h-full w-full" src="./assets/image/ic-cincin.svg" alt="">    
+                            </div>
+                            <h2 class="lg:text-3xl text-2xl  font-base color-base font-bold text-center">Akad Nikah</h2>
+    
+                            <div class="flex flex-row justify-around">
+                                <h1 class="lg:text-2xl text-xl  font-base text-[#9E683F] font-bold w-full text-center flex justify-center items-center">Sabtu</h1>
+                                <div class="flex flex-col border-x border-[#9E683F] w-full text-center h-[50px] my-2">
+                                    <h1 class="lg:text-5xl text-4xl  font-base text-[#9E683F] font-bold h-9">12</h1>
+                                    <span class="lg:text-xl text-base  font-base text-[#9E683F] ">2024</span>
+                                </div>
+                                <h1 class="lg:text-2xl text-xl  font-base text-[#9E683F] font-bold w-full text-center flex justify-center items-center">Des</h1>
+                            </div>
+                            <h3 class="lg:text-xl text-base font-bold text-center color-text mt-2">Pukul 09.00 WIB - Selesai</h3>
+                            <span class="lg:text-xl text-base  font-base text-[#9E683F] text-center mt-1">Alamat</span>
+                            <h3 class="lg:text-xl text-base font-bold text-center color-text">Masjid Raya Agung</h3>
+                            <span class="lg:text-xl text-base text-center color-text">Jl. Nama Jalan dan Nomor Jalan</span>
+                            <div class="flex justify-center items-center mt-1">
+                                <a href="" class=" px-3 py-1 text-white text-xs font-semibold bg-[#9E683F] w-max rounded-md">Lihat Lokasi</a>
+                            </div>
+                        </div>
+    
+                        <div class="flex  flex-col gap-0 max-w-[500px]  w-full rounded-xl py-8 px-3 " style="box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.18);">
+                            <div class="up-down-animation h-10 w-full mb-2 text-center flex justify-start items-center" >
+                                <img class="w-full h-full" src="./assets/image/ic-bunga.svg" alt="">
+                            </div>
+                            <h2 class="lg:text-3xl text-2xl  font-base color-base font-bold text-center">Resepsi</h2>
+    
+                            <div class="flex flex-row justify-around">
+                                <h1 class="lg:text-2xl text-xl  font-base text-[#9E683F] font-bold w-full text-center flex justify-center items-center">Sabtu</h1>
+                                <div class="flex flex-col border-x border-[#9E683F] w-full text-center h-[50px] my-2">
+                                    <h1 class="lg:text-5xl text-4xl  font-base text-[#9E683F] font-bold h-9">12</h1>
+                                    <span class="lg:text-xl text-base  font-base text-[#9E683F] ">2024</span>
+                                </div>
+                                <h1 class="lg:text-2xl text-xl  font-base text-[#9E683F] font-bold w-full text-center flex justify-center items-center">Des</h1>
+                            </div>
+                            <h3 class="lg:text-xl text-base font-bold text-center color-text mt-2">Pukul 09.00 WIB - Selesai</h3>
+                            <span class="lg:text-xl text-base  font-base text-[#9E683F] text-center mt-1">Alamat</span>
+                            <h3 class="lg:text-xl text-base font-bold text-center color-text">Rumah Mempelai Wanita</h3>
+                            <span class="lg:text-xl text-base text-center color-text">Jl. Nama Jalan dan Nomor Jalan</span>
+                            <div class="flex justify-center items-center mt-1">
+                                <a href="" class=" px-3 py-1 text-white text-xs font-semibold bg-[#9E683F] w-max rounded-md">Lihat Lokasi</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-row gap-3 max-w-[500px] w-full mb-8">
+                        <div class="flex flex-col text-white justify-center items-center rounded-lg w-full h-[53px] bg-color-text">
+                            <h1 class="text-2xl h-6">0</h1>
+                            <span class="text-sm">Hari</span>
+                        </div>
+                        <div class="flex flex-col text-white justify-center items-center rounded-lg w-full h-[53px] bg-color-text">
+                            <h1 class="text-2xl h-6">0</h1>
+                            <span class="text-sm">Jam</span>
+                        </div>
+                        <div class="flex flex-col text-white justify-center items-center rounded-lg w-full h-[53px] bg-color-text">
+                            <h1 class="text-2xl h-6">0</h1>
+                            <span class="text-sm">Menit</span>
+                        </div>
+                        <div class="flex flex-col text-white justify-center items-center rounded-lg w-full h-[55px] bg-color-text">
+                            <h1 class="text-2xl h-6">0</h1>
+                            <span class="text-sm">Detik</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <img src="./assets/image/bunga-1.png" class="flower-animate-cs absolute z-10 top-[-20px] lg:w-[200px] w-[130px]" alt="">
+            <img src="./assets/image/bunga-2.png" class="flower-animate-cs absolute z-10 bottom-[-10px] right-0 lg:w-[200px] w-[130px]" alt="">
+        </section>
+        <!-- / section 3 waktu / -->
+
+
+        <!-- section 4 galery -->
+        <section  class="relative overflow-hidden lg:bg-[url('/assets/image/BG-desktop.png')]  bg-[url('/assets/image/BG-01.jpg')]  w-full h-auto bg-no-repeat bg-cover bg-center">
+            <div id="5" class="container lg:px-20 px-0 mx-auto flex flex-col justify-center items-center w-full h-auto">
+                <div id="2" class=" px-10 flex flex-col justify-center items-center h-auto w-full bg-[#FCFBFB] bg-opacity-65 rounded-lg shadow-sm gap-7 py-7 my-40 ">
+
+                    <span class="text-style-cs lg:text-2xl text-xl font-base color-base font-black  w-full text-center mt-8">
+                        Wishes
+                    </span>
+                    <div class="gallery w-full flex justify-center items-center ">
+                        <div class=" thumbnails w-full grid grid-cols-2 md:grid-cols-3 gap-4">
+                            <img class="rounded-md w-full" src="./assets/image/galery/foto-1.jpg" alt="Foto 1" onclick="openModal(); currentSlide(1)">
+                            <img class="rounded-md" src="./assets/image/galery/foto-2.jpg" alt="Foto 2" onclick="openModal(); currentSlide(2)">
+                            <img class="rounded-md" src="./assets/image/galery/foto-3.jpg" alt="Foto 3" onclick="openModal(); currentSlide(3)">
+                            <img class="rounded-md w-full" src="./assets/image/galery/foto-4.jpg" alt="Foto 4" onclick="openModal(); currentSlide(4)">
+                            <img class="rounded-md" src="./assets/image/galery/foto-5.jpg" alt="Foto 5" onclick="openModal(); currentSlide(5)">
+                            <img class="rounded-md" src="./assets/image/galery/foto-6.jpg" alt="Foto 6" onclick="openModal(); currentSlide(6)">
+                        </div>
+                            
+                            <div id="myModal" class="modal">
+                                <div class="card-btncs-galery flex flex-row gap-3 justify-center items-center">
+                                    <img src="./assets/image/icon-menu/full-screen.svg" width="50%" alt="" class="w-5 h-5">
+                                    <img src="./assets/image/icon-menu/zoom.svg" width="50%" alt="" class="w-5 h-5">
+                                    <img src="./assets/image/icon-menu/share.svg" width="50%" alt="" class="w-6 h-6 -ml-1">
+                                    <span class="close cursor" onclick="closeModal()">&times;</span>
+                                </div>
+                            <div class="modal-content">
+                                <div class="mySlides">
+                                    <img src="./assets/image/galery/foto-1.jpg" alt="Foto 1">
+                                </div>
+                                <div class="mySlides">
+                                    <img src="./assets/image/galery/foto-2.jpg" alt="Foto 2">
+                                </div>
+                                <div class="mySlides">
+                                    <img src="./assets/image/galery/foto-3.jpg" alt="Foto 3">
+                                </div>
+                                <div class="mySlides">
+                                    <img src="./assets/image/galery/foto-4.jpg" alt="Foto 4">
+                                </div>
+                                <div class="mySlides">
+                                    <img src="./assets/image/galery/foto-5.jpg" alt="Foto 5">
+                                </div>
+                                <div class="mySlides">
+                                    <img src="./assets/image/galery/foto-6.jpg" alt="Foto 6">
+                                </div>
+                                
+                                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                            </div>
+                            </div>
+                        </div>
+                    </div>        
+                </div>
+
+                <img src="./assets/image/bunga-1.png" class="flower-animate-cs absolute z-10 top-[-20px] lg:w-[200px] w-[130px]" alt="">
+                <img src="./assets/image/bunga-2.png" class="flower-animate-cs absolute z-10 bottom-[-10px] right-0 lg:w-[200px] w-[130px]" alt="">
+            </section>
+
+        <!-- galery -->
+
+        <!-- section 5 send ucapan -->
+        <section  class="relative overflow-hidden lg:bg-[url('/assets/image/BG-desktop.png')]  bg-[url('/assets/image/BG-01.jpg')]  w-full h-auto bg-no-repeat bg-cover bg-center">
+            <div id="5" class="container lg:px-20 px-0 mx-auto flex flex-col justify-center items-center w-full h-auto">
+                <div id="2" class=" px-10 flex flex-col justify-center items-center h-auto w-full bg-[#FCFBFB] bg-opacity-65 rounded-lg shadow-sm gap-7 py-7 my-40 ">
+
+                    <span class="text-style-cs lg:text-2xl text-xl font-base color-base font-black  w-full text-center mt-8">
+                        Wishes
+                    </span>
+
+                    <h2 class="lg:text-2xl text-xl  font-base color-base text-center mx-7 lg:mx-10">Kirimkan Ucapan Dan Doa Restu Untuk Kami</h2>
+                    <span class="lg:text-xl text-sm mx-7 lg:mx-10 text-center color-text ">
+                        Ucapan Selamat Dan Kebahagiaan Bisa Dari Mana Saja. Tanpa Jabatan-Jabatan Tangan Atau Pelukan-Pelukan Hangat, Masih Ada Simpul-Simpul Senyum Dan Doa-Doa Baik Yang Kami Harapkan.
+                    </span>
+
+                    <span class="lg:text-xl text-base mx-1 lg:mx-3 lg:px-2 px-1 py-3 text-center color-text font-base bg-[#D38C5C70] rounded-xl">
+                        Segala komentar dan tulisan yang anda berikan adalah cerminan dari diri pribadi Anda! Terima kasih...
+                    </span>
+                    
+                    <!-- comments -->
+                    <div id="2" class="lg:text-xl mx-1 lg:mx-3 px-1 py-3 text-center color-text font-semibold bg-[#fffaf8] border border-[#e0dcd1] rounded-xl w-full h-auto gap-3" 
+                    >
+                        <span id="btn-comment" class="py-3 px-0  flex w-full justify-center items-center cursor-pointer color-base hover:text-[#19150e] ">0 Comments</span>
+                        <div id="card-comment" class="w-full">
+                            <div class=" border-b border-[#e0dcd1] mt-6 mb-4 py-2 max-w-[500px] w-full px-9 mx-auto flex flex-row gap-3 ">
+                                <div class="flex flex-col text-white justify-center items-center rounded-lg w-full h-[53px] bg-[#3D9A62] gap-1">
+                                    <h1 class="text-2xl h-6">0</h1>
+                                    <span class="text-xs">Hadir</span>
+                                </div>
+                                <div class="flex flex-col text-white justify-center items-center rounded-lg w-full h-[53px] bg-[#d90a11] gap-1">
+                                    <h1 class="text-2xl h-6">0</h1>
+                                    <span class="text-xs">Tidak Hadir</span>
+                                </div>
+                                <div class="flex flex-col text-white justify-center items-center rounded-lg w-full h-[53px] bg-[#d7a916] gap-1">
+                                    <h1 class="text-2xl h-6">0</h1>
+                                    <span class="text-xs">Masih Ragu</span>
+                                </div>
+                            </div>
+                            <!-- form input -->
+                            <form action=""  class="flex flex-col gap-3 mx-3">
+                                <input type="text" class="border border-[#e0dcd1] rounded h-10 px-3 font-normal" placeholder="Nama">
+                                <input type="text" class="border border-[#e0dcd1] rounded h-10 px-3 font-normal" placeholder="Ucapan">
+                                <input type="text" class="border border-[#e0dcd1] rounded h-10 px-3 font-normal" placeholder="Ucapan">
+
+                                <input type="button" class="max-w-max py-1 px-4  rounded-md bg-[#CB9D7D] text-white" value="Kirim">
+                            </form>
+
+                            <!-- comment items -->
+                            <div class="w-full border-y border-[#e0dcd1] mt-6 mb-4 py-2" >
+                                <div class="flex flex-col px-4">
+                                    <div class="flex flex-row gap-1 items-center">
+                                        <h1 class="font-semibold color-text">Saiful</h1>
+                                        ic
+                                    </div>
+                                    <span class="text-base font-normal text-start">
+                                        pesan apa ini
+                                    </span>
+                                    <div class="flex flex-row gap-1 items-center">
+                                        O
+                                        <span class="text-xs">Baru Saja</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+
+                    <h2 class="lg:text-2xl text-xl  font-base color-base text-center mx-3 lg:mx-10 mb-3">“Love is not about how many days, months, or years you have been together. Love is about how much you love each other every single day”</h2>
+                </div> 
+
+                
+            </div>
+
+            <!-- animasi flower -->
+            <img src="./assets/image/bunga-1.png" class="flower-animate-cs absolute z-10 top-[-20px] lg:w-[200px] w-[130px]" alt="">
+            <img src="./assets/image/bunga-2.png" class="flower-animate-cs absolute z-10 bottom-[-10px] right-0 lg:w-[200px] w-[130px]" alt="">
+        </section>
+<!-- section 5 send ucapan -->
+
+         <!-- section 6 send Protokol -->
+         <section  class="relative overflow-hidden lg:bg-[url('/assets/image/BG-desktop.png')]  bg-[url('/assets/image/BG-01.jpg')]  w-full h-auto bg-no-repeat bg-cover bg-center">
+            <div id="5" class="container lg:px-20 px-0 mx-auto flex flex-col justify-center items-center w-full h-auto">
+                <div id="2" class=" px-10 flex flex-col justify-center items-center h-auto w-full bg-[#FCFBFB] bg-opacity-65 rounded-lg shadow-sm gap-7 py-7 my-40 ">
+
+                    <span class="text-style-cs lg:text-2xl text-xl font-base color-base font-black  w-full text-center mt-8">
+                        Protokol Kesehatan
+                    </span>
+
+                    <span class="lg:text-xl text-sm mx-7 lg:mx-10 text-center color-text ">
+                        Tanpa mengurangi rasa hormat, dikarenakan masih dalam masa pandemi Covid-19, dan demi mematuhi protokol kesehatan ditatanan hidup baru. Demi kenyamanan bersama, kami memohon agar para tamu undangan yang hadir berkenan menerapkan protokol kesehatan
+                    </span>
+
+                    <div class="grid grid-cols-3 md:grid-cols-6 gap-4 w-full mb-4 justify-between mt-3">
+
+                        <div class="flex flex-col gap-2 items-center max-w-[200px] w-full">
+                            <div class="flex flex-col text-white justify-center items-center rounded-full h-[100px] w-[100px] bg-color-text overflow-hidden">
+                                <img src="./assets/image/protokol/PROKES-01.png" class="w-full" alt="">
+                            </div>
+                            <span class="lg:text-base text-sm color-text text-center">Cuci Tangan</span>
+                        </div>
+                        
+                        <div class="flex flex-col gap-2 items-center max-w-[200px] w-full">
+                            <div class="flex flex-col text-white justify-center items-center rounded-full h-[100px] w-[100px] bg-color-text overflow-hidden">
+                                <img src="./assets/image/protokol/PROKES-02.png" class="w-full" alt="">
+                            </div>
+                            <span class="lg:text-base text-sm color-text text-center">Gunakan Masker</span>
+                        </div>
+
+                        <div class="flex flex-col gap-2 items-center max-w-[200px] w-full">
+                            <div class="flex flex-col text-white justify-center items-center rounded-full h-[100px] w-[100px] bg-color-text overflow-hidden">
+                                <img src="./assets/image/protokol/PROKES-03.png" class="w-full" alt="">
+                            </div>
+                            <span class="lg:text-base text-sm color-text text-center">Jaga Jarak</span>
+                        </div>
+
+                        <div class="flex flex-col gap-2 items-center max-w-[200px] w-full">
+                            <div class="flex flex-col text-white justify-center items-center rounded-full h-[100px] w-[100px] bg-color-text overflow-hidden">
+                                <img src="./assets/image/protokol/PROKES-04.png" class="w-full" alt="">
+                            </div>
+                            <span class="lg:text-base text-sm color-text text-center">Tidak Berjabat Tangan</span>
+                        </div>
+
+                        <div class="flex flex-col gap-2 items-center max-w-[200px] w-full">
+                            <div class="flex flex-col text-white justify-center items-center rounded-full h-[100px] w-[100px] bg-color-text overflow-hidden">
+                                <img src="./assets/image/protokol/PROKES-05.png" class="w-full" alt="">
+                            </div>
+                            <span class="lg:text-base text-sm color-text text-center">Hindari Kerumunan</span>
+                        </div>
+
+                        <div class="flex flex-col gap-2 items-center max-w-[200px] w-full ">
+                            <div class="flex flex-col text-white justify-center items-center rounded-full h-[100px] w-[100px] bg-color-text overflow-hidden">
+                                <img src="./assets/image/protokol/PROKES-06.png" class="w-full" alt="">
+                            </div>
+                            <span class="lg:text-base text-sm color-text text-center">Gunakan Handsanitizer</span>
+                        </div>
+                    </div>
+
+                    <span class="lg:text-xl text-sm mx-7 lg:mx-10 text-center color-text ">
+                        Atas perhatian dan pengertiannya, kami mengucapkan banyak terima kasih.
+                    </span>
+
+                    <h2 class="lg:text-2xl text-xl  font-base color-base text-center">Wassalamu’alaikum Wr. Wb.</h2>
+
+                    <span class="lg:text-xl text-sm mx-7 lg:mx-10 text-center color-text ">
+                        Kami yang berbahagia,
+                    </span>
+
+                    <div class="w-[250px] h-[250px] lg:w-[320px] lg:h-[320px] overflow-hidden flex justify-center items-center" >
+                        <img src="./assets/image/foto-1.jpg" alt="" class="w-full object-cover style-img-cs" >
+                    </div>
+
+                    <h2 class="lg:text-5xl text-3xl font-bold font-base color-base">Fulan & Fulana</h2>
+
+                    <div class="w-full justify-center items-center grid grid-cols-2 gap-3 md:gap-9 lg:flex-row ">
+                        <div class="flex flex-col gap-3 ">
+                            <span class="lg:text-xl text-sm  text-center">Keluarga Besar</span>
+                            <h2 class="lg:text-3xl text-xl font-bold font-base color-base text-center">Mempelai Pria</h2>
+                            <span class="lg:text-2xl text-sm  font-base color-base text-center md:max-w-full">Bapak Lorem dan Ibu Ipsum</span>
+
+                        </div>
+
+                        <div class="flex flex-col gap-3 ">
+                            <span class="lg:text-xl text-sm  text-center">Keluarga Besar</span>
+                            <h2 class="lg:text-3xl text-xl font-bold font-base color-base text-center">Mempelai Wanita</h2>
+                            <span class="lg:text-2xl text-sm  font-base color-base text-center">Bapak Lorem Dan Ibu Ipsum</span>
+
+                        </div>
+                    </div>
+
+                    <h2 class="lg:text-2xl text-xl  font-base color-base text-center">Turut Mengundang:</h2>
+                    <div class="flex flex-col">
+                        <h2 class="lg:text-2xl text-base color-text text-center font-semibold">Keluarga Besar</h2>
+                        <span class="lg:text-xl text-sm color-text text-center">Bapak Lorem Dan Ibu Ipsum</span>
+                    </div>
+
+                    <div class="flex flex-col">
+                        <h2 class="lg:text-2xl text-base color-text text-center font-semibold">Keluarga Besar</h2>
+                        <span class="lg:text-xl text-sm color-text text-center">Bapak Lorem Dan Ibu Ipsum</span>
+                    </div>
+
+                    <div class="flex flex-col">
+                        <h2 class="lg:text-2xl text-base color-text text-center font-semibold">Keluarga Besar & Ninik Mamak</h2>
+                        <span class="lg:text-xl text-sm color-text text-center">dari Kedua Mempelai</span>
+                    </div>
+
+                    <h2 class="lg:text-3xl text-xl font-bold font-base color-base text-center">Desaign By : </h2>
+
+
+                    <img src="./assets/image/Logo-Undangan-Onlineku.png" alt="" class="w-[40%] md:w-[30%]">
+
+                    <div class="grid grid-cols-3  gap-9">
+                        <a href="">1</a>
+                        <a href="">1</a>
+                        <a href="">1</a>
+                    </div>
+                </div>
+            </div>
+
+            <img src="./assets/image/bunga-1.png" class="flower-animate-cs absolute z-10 top-[-20px] lg:w-[200px] w-[130px]" alt="">
+            <img src="./assets/image/bunga-2.png" class="flower-animate-cs absolute z-10 bottom-[-10px] right-0 lg:w-[200px] w-[130px]" alt="">
+        </section>
+       
+    </main>
+    <script src="script.js"></script>
+
+        
+
+    </main>
+    <script src="./assets/js/comment.js"></script>
+
+    <script src="./assets/js/script.js"></script>
+
+</body>
+</html>
